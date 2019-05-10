@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head> 
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+
+<SCRIPT LANGUAGE= "JavaScript" type= "text/javascript">
+
+var users = new Array("admin", "user", "login");
+var passwords = new Array("admin", "user", "haslo");
+function sprawdz_haslo(user, pass)
+{  
+  for(var i = 0; i < users.length; i++){
+    if((user == users[i]) && (pass == passwords[i]))
+      return true;
+  }
+  return false;
+}
+function check()
+{
+  var user = document.form1.user.value;
+  var pass = document.form1.pass.value;
+  if(!sprawdz_haslo(user, pass)){
+      alert('Niepoprawne hasło!');
+  }
+  else{
+    document.location.href = "main.html"; 
+  }
+}
+// Koniec kodu JavaScript -->
+</SCRIPT>
+
+
+
+
+<title>Rammstein Die Band</title>
+
+<meta name="description" content="Strona poświęcona zespołowi Rammstein" />
+<meta name="keywords" content="rammstein"/>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Quicksand&amp;subset=latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+</head>
+
+<body> 
+	
+	<div class="wrapper">
+		<div class="header">
+			<div class="banner">
+			<center> <a href="https://www.rammstein.de/en/"> <img id="banner" src="img/rammstein.png"> </a></img> </center>
+			</div>
+			<div class="nav" style="height: 40px; font-size: 25px; letter-spacing:2px;" >
+				ZALOGUJ SIĘ ABY PRZEGLĄDAĆ ZAWARTOŚĆ STRONY
+			</div>
+		</div>
+	</div>
+     <div class="container">
+	
+		<div class="content" ">
+	
+			<h1 style="margin-left: 120px;"> RAMMSTEIN!  </h1>
+	
+	<div class="regbox">
+						<img class="logo" onmouseover="blurContent()" src="img/logo.png" width="30%" height="30%" ></img>
+						<h3> Wpisz dane logowania</h3>
+						
+							<FORM NAME = "form1">
+							<input class="field" type="text" placeholder="podaj login" name="user"  onFocus="this.value='';">
+							<input class="field" type="password" placeholder="podaj hasło" name="pass"  onFocus="this.value='';">
+							<button class="button-registry" type="button" onClick="check();"> ZALOGUJ </button>
+							</form>
+						    
+					</div>
+
+	
+	
+	
+	
+</div>	
+			
+		</div>
+	
+		<div class="ad">
+		<br></br>
+		Dane do logowania:
+		<br></br>
+		<span style="color: #f7273e; font-size: 15px; font-family: 'Quicksand', sans-serif; text-transform: none;">login: admin <br> hasło: admin<br>
+		</div>
+	
+	<div style="clear: both"> </div>
+	</div>
+	
+	<div class="socials">
+		<div class="socialdivs">
+		<a href="https://www.facebook.com/Rammstein/" class="titlelink">
+			<div class="fb">
+				<i class="icon-facebook"> </i>
+			</div> </a>
+			<a href="https://www.youtube.com/channel/UCYp3rk70ACGXQ4gFAiMr1SQ" class="titlelink">
+			<div class="yt">
+				<i class="icon-youtube-play"> </i>
+			</div> </a>
+			<a href="https://twitter.com/rsprachrohr" class="titlelink">
+			<div class="tw">
+				<i class="icon-twitter"> </i>
+			</div></a>
+			<a href="https://plus.google.com/communities/116004790417346480696" class="titlelink">
+			<div class="gplus">
+				<i class="icon-gplus"> </i>
+			</div></a>
+			<div style="clear: both"> </div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+<div class="footer">
+2019 &copy; RAMMSTEIN DIE BAND
+</div>
+
+</body>
+
+
+</html>
